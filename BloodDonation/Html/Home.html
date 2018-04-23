@@ -1,0 +1,495 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <title>Blood Donation</title>
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+
+    <link rel="stylesheet" href="../Css/Style.css"> 
+    <link href="https://fonts.googleapis.com/css?family=Slabo+27px" rel="stylesheet">
+    <script src="http://maps.google.com/maps/api/js?sensor=false" 
+          type="text/javascript"></script>
+
+      <style>
+          
+          .fa-info{
+              
+              cursor: pointer;
+              font-size: 35px;
+          }
+          .fa-info:hover{
+              color:aqua;
+              transition-duration: 1s;
+          }
+body {
+  margin: 0;
+  font-size: 28px;
+  z-index: -100;
+}
+
+.header {
+  background-color: #f1f1f1;
+  padding: 30px;
+  text-align: center;
+}
+
+#navbar {
+  overflow: hidden;
+  background-color: whitesmoke;
+  position:sticky;
+  z-index: 100;
+}
+
+#navbar a {
+  float: left;
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+#navbar a:hover {
+  background-color:  #ff0000  ;
+  color: black;
+}
+
+#navbar a.active {
+  background-color:#e50000; 
+  color: white;
+}
+
+.content {
+  padding: 16px;
+}
+
+.sticky {
+  position: ;
+  top: 0;
+  width: 100%;
+}
+
+.sticky + .content {
+  padding-top: 60px;
+}
+</style>
+
+  </head>
+  <body>
+    
+      
+            
+      <header>
+          
+          
+       <div class="banner-center text-center">
+          
+           <h1 class="display-2"><strong>BLOOD DONATION</strong></h1>
+           <div class="quote"><h2>"You are someone's type, Please Donate."</h2></div>
+           
+       </div>
+      </header>
+      
+      <div id="navbar">
+        <a class="active" href="#info">Info</a>
+        <a href="#nearbyBanks">Nearby Blood Banks</a>
+        <a href="#nearbyDonars">Nearby Donars</a>
+        <a href="#footer">Contact</a>
+      </div>
+      
+      <section id="skills" class="container-fluid text-center">
+     
+       <div class="title">
+         
+           <h1 class="display-3" id="info">Blood Donation</h1>
+           <p>Blood Donation is for public donation center with blood donation members in the changing health care system.
+           Blood donation is an integral part of the health and well being of the community. The need is constant, and there is no substitute for volunteer blood donations.
+Every 2 seconds, someone needs a blood transfusion. And, each donation can help save up to three lives. Read below to learn more about donating.</p>
+
+           
+           
+           
+       </div>
+      
+          <div class="row">
+           <article class="col-sm-4">
+              <i class="fa fa-thumbs-up"></i>
+              <h2>ELIGIBILTY</h2>
+               <p class="text-muted">Check Eligibity</p>
+              <a href="#" class="btn btn-block" data-toggle="modal" data-target="#eligible">Learn More</a>
+           </article>
+          
+          <article class="col-sm-4">
+              <i class="fa fa-user-md"></i>
+              <h2>DOCTORS</h2>
+               <p class="text-muted">Consult a Specialist</p>
+              <a href="#" class="btn btn-block" data-toggle="modal" data-target="#doctor">Learn More</a>
+           </article>
+              
+              <article class="col-sm-4">
+              <i class="fa fa-plus-square"></i>
+              <h2>DONARS</h2>
+               <p class="text-muted">Donate Blood</p>
+              <a href="#" class="btn btn-block" data-toggle="modal" data-target="#donars">Learn More</a>
+           </article>
+          
+          
+          </div>
+      
+      </section>
+    
+      <hr style="background-color: darkred; height: 1px; width: 80%">
+      <section class="banks" id="nearbyBanks">
+      
+      <div class="row"><div class="col-12 text-center"><h3  class="display-2" style="text-shadow: 2px 4px 2px gray;">Nearby Banks</h3><br></div></div>
+      
+      
+      
+      </section>
+          <div id="map" style="width: 100%; height: 600px;"></div>
+      
+      
+      <hr style="background-color: darkred; height: 1px; width: 80%">
+      
+      <section id="nearbyDonars">
+      
+          <div class="conatiner-fluid">
+            <div class="row"><div class="col-12 text-center"><h3  class="display-2" style="text-shadow: 2px 4px 2px gray;">Nearby Donars</h3><br></div></div>
+            <div class="row">
+              
+              <div class="col-12 container">
+                
+              <table class="table table-dark table-striped">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Blood Group</th>
+        <th>Last date donated</th>
+        <th>Contact</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Abhishek Gupta</td>
+        <td>18</td>
+        <td>B+</td>
+        <td>23 March 2018</td>
+        <td>7545423441&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="fa fa-info" data-toggle="modal" data-target="#info1"></span></td>
+      </tr>
+      <tr>
+        <td>Abrar Ahmad Raza</td>
+        <td>19</td>
+        <td>A+</td>
+        <td>11 Feb 2018</td>
+          <td>8751007246&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="fa fa-info"  data-toggle="modal" data-target="#info1"></span></td>
+      </tr>
+      <tr>
+        <td>DeshBandhu</td>
+        <td>18</td>
+        <td>O+</td>
+          <td>30 March 2017</td>
+        <td>9842224581&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="fa fa-info"  data-toggle="modal" data-target="#info1"></span></td>
+      </tr>
+    </tbody>
+  </table>
+                  <center><button class="btn btn-lg btn-success">More</button></center>
+                  
+                </div></div>
+      
+          </div>
+      </section>
+<hr style="background-color: darkred; height: 1px; width: 80%">
+  <script type="text/javascript">
+     var la=31.3244487,lo=75.56710429999998;
+      function getLocation() {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(function(position) {
+  la=position.coords.latitude;lo= position.coords.longitude;
+});}}
+    var locations = [
+      ['Ohri Hospital', 31.3244487, 75.56710429999998, 4],
+      ['Blood Bank', 31.2142003, 75.77566609999997, 5],
+      ['Guru Teg Bahadur Charitable', 30.88977420000001, 75.83546279999996],
+      ['Red Cross', 30.9073695, 75.84059479999996, 2],
+      ['SGL Hospital', 31.3062661,75.5935935 , 1]
+    ];
+   
+    var map = new google.maps.Map(document.getElementById('map'), {
+      zoom: 10,
+      center: new google.maps.LatLng(la,lo),
+      mapTypeId: google.maps.MapTypeId.ROADMAP
+    });
+    
+        
+    var infowindow = new google.maps.InfoWindow();
+
+    var marker, i;
+
+    for (i = 0; i < locations.length; i++) {  
+      marker = new google.maps.Marker({
+        position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+        map: map
+      });
+
+      google.maps.event.addListener(marker, 'click', (function(marker, i) {
+        return function() {
+          infowindow.setContent(locations[i][0]);
+          infowindow.open(map, marker);
+        }
+      })(marker, i));
+    }
+  </script>
+      
+
+      <div class="modal fade" id="info1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+       <div class="modal-dialog" role="document">
+         <div class="modal-content">
+            <div class="modal-header">
+               
+               <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            </div>
+            <div class="modal-body text-center">
+               <table class="table" style="font-size: 10px;">
+    <thead>
+      <tr>
+        <th>Abhishek Gupta</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Age</td>
+        <td>18</td>
+        
+      </tr>
+      <tr>
+        <td>Address</td>
+        <td>Rawa Mandi, Phagwara</td>
+        
+      </tr>
+      <tr>
+        <td>Blood Group</td>
+        <td>B+</td>
+        
+      </tr>
+    
+        <tr>
+        <td>Last date Donated</td>
+        <td>23 March 2018</td>
+        
+      </tr>
+        
+        <tr>
+        <td>Contact</td>
+        <td>7545423441</td>
+        
+      </tr>
+      <tr>
+        <td>Email</td>
+        <td>gupta.Abhishek426@gmail.com</td>
+        
+      </tr>
+      <tr>
+        <td>Hospital Associate with</td>
+        <td>Ganga Ben Hospital</td>
+        
+      </tr>
+    </tbody>
+  </table>
+            </div>
+            <div class="modal-footer">
+               <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+               
+            </div>
+         </div>
+      </div>
+   </div>
+      
+      
+   <div class="modal fade" id="eligible" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+       <div class="modal-dialog" role="document">
+         <div class="modal-content">
+            <div class="modal-header">
+               <div class="modal-title text-center">ELIGIBILITY</div>
+               <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            </div>
+            <div class="modal-body" style="font-size: 15px;">
+               <ul>
+            <li>Any donor, who is healthy, fit and not suffering from any transmittable diseases can donate blood.</li>
+                
+               <li>Donor must be 18 -60 years age and having a minimum weight of 50Kg can donate blood.</li>
+               <li>Donor’s Hemoglobin level is 12.5% minimum.</li>
+               <li>A donor can again donate blood after 3 months of your last donation of blood.</li>
+               <li>Pulse rate must be between 50 to 100mm without any irregularities.</li>
+               <li>BP Diastolic 50 to 100 mm Hg and Systolic 100 to 180 mm Hg.</li>
+               <li>Body temperature should be normal and oral temperature should not exceed 37.5 degree Celsius.</li>
+  
+           </ul>
+            </div>
+            <div class="modal-footer">
+               <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+               
+            </div>
+         </div>
+      </div>
+   </div>
+   
+      
+     <div class="modal fade" id="doctor" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+       <div class="modal-dialog" role="document">
+         <div class="modal-content">
+            <div class="modal-header">
+               <h5 class="modal-title text-center" id="exampleModalLabel">Dr. Ram Naresh - Specialist</h5>
+               <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            </div>
+            <div class="modal-body">
+                <table class="table" style="font-size: 10px;">
+    
+    <tbody>
+      <tr>
+        <td>Age</td>
+        <td>52</td>
+        
+      </tr>
+      <tr>
+        <td>Specialist</td>
+        <td>Phd Hematologist</td>
+        
+      </tr>
+      <tr>
+        <td>Hospital</td>
+        <td>DY Patil Hospital, Phagwara</td>
+        
+      </tr>
+    
+        <tr>
+        <td>Email</td>
+        <td>RamNaresh@gmail.com</td>
+        
+      </tr>
+        
+        <tr>
+        <td>Contact</td>
+        <td>7545423441</td>
+        
+      
+      </tr>
+    </tbody>
+  </table>
+            </div>
+            <div class="modal-footer">
+               <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+         </div>
+      </div>
+   </div> 
+      
+<div class="modal fade" id="donars" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+       <div class="modal-dialog" role="document">
+         <div class="modal-content">
+            <div class="modal-header">
+               <h5 class="modal-title" id="exampleModalLabel">Donars</h5>
+               <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            </div>
+            <div class="modal-body">
+                <table class="table table-striped" style="font-size: 15px;">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Blood Group</th>
+        <th>Last date donated</th>
+        <th>Contact</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Abhishek Gupta</td>
+        <td>18</td>
+        <td>B+</td>
+        <td>23 March 2018</td>
+        <td>7545423441</td>
+      </tr>
+      <tr>
+        <td>Abrar Ahmad Raza</td>
+        <td>19</td>
+        <td>A+</td>
+        <td>11 Feb 2018</td>
+          <td>8751007246</td>
+      </tr>
+      <tr>
+        <td>DeshBandhu</td>
+        <td>18</td>
+        <td>O+</td>
+          <td>30 March 2017</td>
+        <td>9842224581</td>
+      </tr>
+    </tbody>
+  </table>
+            </div>
+            <div class="modal-footer">
+               <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+               
+            </div>
+         </div>
+      </div>
+   </div>      
+      
+      
+      
+      <section id="footer" class="container-fluid text-center">
+        <div class="title">
+         
+           <h1 class="display-4" style="padding-right: 40px">Contact Us</h1>
+        </div>
+          
+        <p style="margin-left: -42px">1800-5667-12</p>
+        <div class="footer-icons">
+            <center>
+          <a href="#"><i class="fa fa-facebook"></i></a>
+          <a href="#"><i class="fa fa-twitter"></i></a>
+          <a href="#"><i class="fa fa-instagram"></i></a>
+          <a href="#"><i class="fa fa-google-plus"></i></a>
+          <a href="#"><i class="fa fa-linkdin"></i></a>
+                </center>
+                </div>
+            
+          
+          <div class="copyrights">
+          
+           <h3>&copy; - 2018</h3>
+              
+          </div>
+      </section>
+      
+    
+     <script>
+    window.onscroll = function() {myFunction()};
+
+var navbar = document.getElementById("navbar");
+var sticky = navbar.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky")
+  } else {
+    navbar.classList.remove("sticky");
+  }
+}
+</script>
+      
+   
+      
+    
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html>

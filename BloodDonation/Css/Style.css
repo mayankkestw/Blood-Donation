@@ -1,0 +1,153 @@
+body{
+    
+}
+.transparent{
+  background: gray;
+}
+
+.banner-center h1{
+    text-shadow:5px 5px 12px #990000;
+}
+.banner-center h2{
+    text-shadow:2px 2px #7F0000;
+    color: darkkhaki;
+}
+
+
+header{
+    height: 100vh;
+    background: url('../Media/blood-pressure-3312513.png') fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: lightgray;
+}
+.banner-center{
+    height: 100vh;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/*End of Banner*/
+
+
+
+
+
+/*Skills*/
+.title{
+    margin: 20px 0;
+    padding: 30px;
+}
+
+.title p{
+    font-size: 0.8em;
+    line-height: 2em;
+}
+.title ul{
+    font-family: Slabo;
+    padding-top: 30px;
+}
+#skills h2{
+    color: orangered !important;
+}
+
+#skills{
+    padding: 40px;
+    color: #2d3142;
+    margin-bottom: 10px;
+}
+#skills .fa{
+    font-size: 100px;
+    margin-bottom: 10px;
+}
+#skills .fa:hover{
+    color: orangered;
+    cursor: pointer;
+    transition-duration: 1s;
+}
+#skills a{
+    margin-bottom: 20px;
+    background-color: #f15025;
+    color: whitesmoke;
+    font-size: 20px;
+}
+#skills a:hover{
+   background-color:  #ced0ce;
+  
+}
+#about{
+    background-color: #2d3142;
+}
+#about .pic{
+    height: 600px;
+    background: url('../Media/blood-156063_960_720.png');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-bottom: 600px solid transparent;
+    border-left: 100px solid #2d3142;
+    
+}
+#about .box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#contact{
+    padding: 40px;
+    background-color: whitesmoke;
+}
+#contact .form-control{
+    border-radius: 0!important;
+    font-size: 20px;
+}
+#contact button{
+    background-color: #353531;
+    font-size: 24px;
+    color: #f15025;
+    margin-bottom: 20px;
+}
+#contact button:hover{
+    background-color: #ced0ce;
+}
+#footer{
+    padding: 40px;
+    color: whitesmoke;
+    background-color: #353531;
+    
+}
+#footer .title-underline{
+    margin-bottom: 40px;
+}
+
+
+#footer .footer-icons{
+    font-size: 60px;
+    padding-top: 20px;
+    
+}
+.footer-icons .fa{
+    padding: 0px 0px 0px 150px;
+    
+    
+}
+#footer .footer-icons a{
+    color: deepskyblue;
+    text-decoration: none;
+}
+#footer .footer-icons a:hover{
+    color: #f15025;
+}
+#footer .copyrights h3{
+    padding: 40px 0;
+    color : #ced0ce;
+}
+
+#map{
+    
+   
+}
