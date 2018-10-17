@@ -2,7 +2,7 @@ body{
     
 }
 .transparent{
-  background: gray;
+  background:linear-gradient(to right, gray,white);
 }
 
 .banner-center h1{
