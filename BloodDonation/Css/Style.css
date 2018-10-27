@@ -112,7 +112,7 @@ header{
     margin-bottom: 20px;
 }
 #contact button:hover{
-    background-color: #ced0ce;
+    background-color: gray;
 }
 #footer{
     padding: 40px;
